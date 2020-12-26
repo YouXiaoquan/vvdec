@@ -1,0 +1,30 @@
+﻿{
+  "configurations": [
+    {
+      "name": "Android-v8a-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "C:/Microsoft/AndroidNDK64/android-ndk-r22/build/cmake/android.toolchain.cmake",
+      "variables": []
+    },
+    {
+      "name": "Android-v8a-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [ "" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "C:/Microsoft/AndroidNDK64/android-ndk-r22/build/cmake/android.toolchain.cmake",
+      "variables": []
+    }
+  ]
+}
