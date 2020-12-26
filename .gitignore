@@ -3,6 +3,7 @@ dec.yuv
 rec.yuv
 str.bin
 /arm64Build/
+/x64Build/
 /bin/
 /build/
 core

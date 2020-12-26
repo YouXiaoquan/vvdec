@@ -51,8 +51,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 # include <pthread.h>
 #endif
 
-//Close this H file, When target is none X86 or X64 CPU.
-//#include <emmintrin.h>
+#include <emmintrin.h>
 
 
 NoMallocThreadPool::NoMallocThreadPool( int numThreads, const char * threadPoolName )

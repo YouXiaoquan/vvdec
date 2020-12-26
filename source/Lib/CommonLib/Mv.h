@@ -77,19 +77,22 @@ enum MvPrecision
 /// basic motion vector class
 struct Mv
 {
+#if defined( _DEBUG )
   static constexpr MvPrecision m_amvrPrecision[4] = { MV_PRECISION_QUARTER, MV_PRECISION_INT, MV_PRECISION_4PEL, MV_PRECISION_HALF };
+#endif
+  static constexpr uint16_t amvrPrecisionMagic = 0x614;
   static constexpr int mvClipPeriod = (1 << MV_BITS);
   static constexpr int halMvClipPeriod = (1 << (MV_BITS - 1));
 
-  int   hor;     ///< horizontal component of motion vector
-  int   ver;     ///< vertical component of motion vector
+  int32_t   hor;     ///< horizontal component of motion vector
+  int32_t   ver;     ///< vertical component of motion vector
 
   // ------------------------------------------------------------------------------------------------------------------
   // constructors
   // ------------------------------------------------------------------------------------------------------------------
 
-  Mv(                    ) : hor( 0    ), ver( 0    ) {}
-  Mv( int iHor, int iVer ) : hor( iHor ), ver( iVer ) {}
+  constexpr Mv(                    ) : hor( 0    ), ver( 0    ) {}
+  constexpr Mv( int iHor, int iVer ) : hor( iHor ), ver( iVer ) {}
 
   // ------------------------------------------------------------------------------------------------------------------
   // set
@@ -139,12 +142,12 @@ struct Mv
 
   const Mv scaleMv( int iScale ) const
   {
-    const int mvx = Clip3( -131072, 131071, (iScale * hor + 128 - (iScale * hor >= 0)) >> 8);
-    const int mvy = Clip3( -131072, 131071, (iScale * ver + 128 - (iScale * ver >= 0)) >> 8);
+    const int mvx = Clip3( -( 1 << 17 ), ( 1 << 17 ) - 1, (iScale * hor + 128 - (iScale * hor >= 0)) >> 8);
+    const int mvy = Clip3( -( 1 << 17 ), ( 1 << 17 ) - 1, (iScale * ver + 128 - (iScale * ver >= 0)) >> 8);
     return Mv( mvx, mvy );
   }
 
-  void changePrecision(const MvPrecision& src, const MvPrecision& dst)
+  void changePrecision(const MvPrecision src, const MvPrecision& dst)
   {
     const int shift = (int)dst - (int)src;
     if (shift >= 0)
@@ -163,7 +166,9 @@ struct Mv
 
   void changePrecisionAmvr(const int amvr, const MvPrecision& dst)
   {
-    changePrecision(m_amvrPrecision[amvr], dst);
+    const int amvrPrecision = (amvrPrecisionMagic >> (amvr*3)) & 7;
+    CHECKD(m_amvrPrecision[amvr] != amvrPrecision, "amvrPrecision check failed");
+    changePrecision((const MvPrecision)amvrPrecision, dst);
   }
 
   void roundToPrecision(const MvPrecision& src, const MvPrecision& dst)
@@ -174,7 +179,9 @@ struct Mv
 
   void roundToAmvrSignalPrecision(const MvPrecision& src, const int amvr)
   {
-    roundToPrecision(src, m_amvrPrecision[amvr]);
+    const int amvrPrecision = (amvrPrecisionMagic >> (amvr*3)) & 7;
+    CHECKD(m_amvrPrecision[amvr] != amvrPrecision, "amvrPrecision check failed");
+    roundToPrecision(src, (const MvPrecision)amvrPrecision);
   }
 
   void clipToStorageBitDepth()

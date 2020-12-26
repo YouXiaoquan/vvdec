@@ -786,30 +786,17 @@ struct SEIMasteringDisplay
   uint16_t whitePoint[2];
 };
 
-class ChromaCbfs
+struct ChromaCbfs
 {
-public:
-  ChromaCbfs()
-    : Cb( false ), Cr( false )
-  {}
-public:
-  bool sigChroma( ChromaFormat chromaFormat ) const
-  {
-    if( chromaFormat == CHROMA_400 )
-    {
-      return false;
-    }
-    return   ( Cb || Cr );
-  }
-  bool& cbf( ComponentID compID )
-  {
-    bool *cbfs[MAX_NUM_TBLOCKS] = { nullptr, &Cb, &Cr };
-
-    return *cbfs[compID];
-  }
-public:
   bool Cb;
   bool Cr;
+
+  constexpr ChromaCbfs() : Cb( false ), Cr( false )  {}
+
+  bool sigChroma( ChromaFormat chromaFormat ) const
+  {
+    return (chromaFormat == CHROMA_400) ? false : (Cb || Cr);
+  }
 };
 
 struct LoopFilterParam
@@ -901,18 +888,11 @@ public:
   typedef ptrdiff_t difference_type;
   typedef T&        reference;
   typedef T const&  const_reference;
-  typedef T*        pointer;
-  typedef T const*  const_pointer;
   typedef T*        iterator;
   typedef T const*  const_iterator;
 
-  static const size_type max_num_elements = N;
-
-  static_vector() : _size( 0 )                                 { }
-  static_vector( size_t N_ ) : _size( N_ )                     { }
-  static_vector( size_t N_, const T& _val ) : _size( 0 )       { resize( N_, _val ); }
-  template<typename It>
-  static_vector( It _it1, It _it2 ) : _size( 0 )               { while( _it1 < _it2 ) _arr[ _size++ ] = *_it1++; }
+  constexpr static_vector() : _size( 0 )                       { }
+  constexpr static_vector( size_t N_ ) : _size( N_ )           { }
   static_vector( std::initializer_list<T> _il ) : _size( 0 )
   {
     typename std::initializer_list<T>::iterator _src1 = _il.begin();
@@ -922,55 +902,28 @@ public:
 
     CHECKD( _size > N, "capacity exceeded" );
   }
-  static_vector& operator=( std::initializer_list<T> _il )
-  {
-    _size = 0;
-
-    typename std::initializer_list<T>::iterator _src1 = _il.begin();
-    typename std::initializer_list<T>::iterator _src2 = _il.end();
-
-    while( _src1 < _src2 ) _arr[ _size++ ] = *_src1++;
-
-    CHECKD( _size > N, "capacity exceeded" );
-    return *this;
-  }
 
   void resize_noinit( size_t N_ )               { CHECKD( N_ > N, "capacity exceeded" ); _size = N_; }
   void resize( size_t N_ )                      { CHECKD( N_ > N, "capacity exceeded" ); while(_size < N_) _arr[ _size++ ] = T() ; _size = N_; }
-  void resize( size_t N_, const T& _val )       { CHECKD( N_ > N, "capacity exceeded" ); while(_size < N_) _arr[ _size++ ] = _val; _size = N_; }
-  void reserve( size_t N_ )                     { CHECKD( N_ > N, "capacity exceeded" ); }
   void push_back( const T& _val )               { CHECKD( _size >= N, "capacity exceeded" ); _arr[ _size++ ] = _val; }
   void pop_back()                               { CHECKD( _size == 0, "calling pop_back on an empty vector" ); _size--; }
-  void pop_front()                              { CHECKD( _size == 0, "calling pop_front on an empty vector" ); _size--; for( int i = 0; i < _size; i++ ) _arr[i] = _arr[i + 1]; }
   void clear()                                  { _size = 0; }
-  reference       at( size_t _i )               { CHECKD( _i >= _size, "Trying to access an out-of-bound-element" ); return _arr[ _i ]; }
-  const_reference at( size_t _i ) const         { CHECKD( _i >= _size, "Trying to access an out-of-bound-element" ); return _arr[ _i ]; }
   reference       operator[]( size_t _i )       { CHECKD( _i >= _size, "Trying to access an out-of-bound-element" ); return _arr[ _i ]; }
   const_reference operator[]( size_t _i ) const { CHECKD( _i >= _size, "Trying to access an out-of-bound-element" ); return _arr[ _i ]; }
   reference       front()                       { CHECKD( _size == 0, "Trying to access the first element of an empty vector" ); return _arr[ 0 ]; }
   const_reference front() const                 { CHECKD( _size == 0, "Trying to access the first element of an empty vector" ); return _arr[ 0 ]; }
   reference       back()                        { CHECKD( _size == 0, "Trying to access the last element of an empty vector" );  return _arr[ _size - 1 ]; }
   const_reference back() const                  { CHECKD( _size == 0, "Trying to access the last element of an empty vector" );  return _arr[ _size - 1 ]; }
-  pointer         data()                        { return _arr; }
-  const_pointer   data() const                  { return _arr; }
   iterator        begin()                       { return _arr; }
   const_iterator  begin() const                 { return _arr; }
-  const_iterator  cbegin() const                { return _arr; }
   iterator        end()                         { return _arr + _size; }
   const_iterator  end() const                   { return _arr + _size; };
-  const_iterator  cend() const                  { return _arr + _size; };
   size_type       size() const                  { return _size; };
-  size_type       byte_size() const             { return _size * sizeof( T ); }
   bool            empty() const                 { return _size == 0; }
 
-  size_type       capacity() const              { return N; }
-  size_type       max_size() const              { return N; }
-  size_type       byte_capacity() const         { return sizeof(_arr); }
+  constexpr size_type capacity() const          { return N; }
 
-  void            erase( const_iterator _pos )  { iterator it   = const_cast<iterator>( _pos ) - 1;
-                                                  iterator last = end() - 1;
-                                                  while( ++it != last ) *it = *( it + 1 );
-                                                  _size--; }
+  void            eraseAt( size_t _pos )        { _size--; memmove(_arr + _pos, _arr + _pos + 1, (_size - _pos) * sizeof(T)); }
 };
 
 #define SIGN(x) ( (x) >= 0 ? 1 : -1 )
@@ -1007,9 +960,7 @@ struct AlfSliceParam
   short            chromaCoeff        [MAX_NUM_ALF_ALTERNATIVES_CHROMA * MAX_NUM_ALF_CHROMA_COEFF]; // alf_coeff_chroma[i]
   uint8_t          chromaClipp        [MAX_NUM_ALF_ALTERNATIVES_CHROMA * MAX_NUM_ALF_CHROMA_COEFF]; // alf_clipp_chroma[i]
   short            filterCoeffDeltaIdx[MAX_NUM_ALF_CLASSES];                        // filter_coeff_delta[i]
-  bool             filterCoeffFlag    [MAX_NUM_ALF_CLASSES];                        // filter_coefficient_flag[i]
   int              numLumaFilters;                                                  // number_of_filters_minus1 + 1
-  bool             coeffDeltaFlag;                                                  // alf_coefficients_delta_flag
   
   bool             lumaFinalDone   = false;
   bool             chrmFinalDone   = false;
@@ -1030,40 +981,18 @@ struct AlfSliceParam
     numLumaFilters = 1;
     numAlternativesChroma = 1;
   }
-
-  const AlfSliceParam& operator=( const AlfSliceParam& src )
-  {
-    std::memcpy( this, &src, sizeof( AlfSliceParam ) );
-    return *this;
-  }
 };
 
 struct CcAlfFilterParam
 {
-  bool    ccAlfFilterEnabled[2];
   bool    ccAlfFilterIdxEnabled[2][MAX_NUM_CC_ALF_FILTERS];
   uint8_t ccAlfFilterCount[2];
   short   ccAlfCoeff[2][MAX_NUM_CC_ALF_FILTERS][MAX_NUM_CC_ALF_CHROMA_COEFF];
   int     newCcAlfFilter[2];
-  int     numberValidComponents;
 
   CcAlfFilterParam()
   {
     memset( this, 0, sizeof( *this ) );
-  }
-
-  void reset()
-  {
-    std::memset( this, 0, sizeof( CcAlfFilterParam ) );
-    ccAlfFilterCount[0] = ccAlfFilterCount[1] = MAX_NUM_CC_ALF_FILTERS;
-    numberValidComponents = 3;
-    newCcAlfFilter[0] = newCcAlfFilter[1] = 0;
-  }
-  
-  const CcAlfFilterParam& operator = ( const CcAlfFilterParam& src )
-  {
-    std::memcpy( this, &src, sizeof( CcAlfFilterParam ) );
-    return *this;
   }
 };
 
@@ -1086,34 +1015,6 @@ template<typename TList> static void move_to_end( typename TList::const_iterator
 // ---------------------------------------------------------------------------
 // c++11/14 workarounds
 // ---------------------------------------------------------------------------
-
-// move_wrapper:
-//   adapter class, that moves an object instead of copying
-//   (not needed with c++14, when we have generalized lambda capture)
-//
-//   Be careful, when using this class to not acciedentially create 'copies'
-//   invalidating the state of the copied-from object.
-#ifndef __cpp_init_captures
-template<class T>
-struct move_wrapper: public T
-{
-  // constuct from rvalue-ref
-  explicit move_wrapper(T && rref): T(std::forward<T>(rref)) {}
-
-  // the copy-constructor actually does a move of the contained object
-  move_wrapper(move_wrapper & other): T( std::move(other) )  {}
-
-  // normal move constructor and assignment
-  move_wrapper(move_wrapper &&)             = default;
-  move_wrapper & operator=(move_wrapper &&) = default;
-
-  // disable default and const-copy construction
-  move_wrapper() = delete;
-  move_wrapper(const move_wrapper &) = delete;
-  move_wrapper & operator=(const move_wrapper &) = delete;
-
-};
-#endif // !__cpp_init_captures
 
 //! \}
 

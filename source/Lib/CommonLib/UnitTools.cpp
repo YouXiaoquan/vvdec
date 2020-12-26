@@ -2757,13 +2757,13 @@ void PU::setAllAffineMv( PredictionUnit& pu, Mv affLT, Mv affRT, Mv affLB, RefPi
 
   int deltaMvHorX, deltaMvHorY, deltaMvVerX, deltaMvVerY;
 
-  deltaMvHorX = ( affRT - affLT ).hor << ( shift - getLog2( width ) );
-  deltaMvHorY = ( affRT - affLT ).ver << ( shift - getLog2( width ) );
+  deltaMvHorX = ( affRT.hor - affLT.hor ) << ( shift - getLog2( width ) );
+  deltaMvHorY = ( affRT.ver - affLT.ver ) << ( shift - getLog2( width ) );
 
   if ( pu.affineType() == AFFINEMODEL_6PARAM )
   {
-    deltaMvVerX = ( affLB - affLT ).hor << ( shift - getLog2( height ) );
-    deltaMvVerY = ( affLB - affLT ).ver << ( shift - getLog2( height ) );
+    deltaMvVerX = ( affLB.hor - affLT.hor ) << ( shift - getLog2( height ) );
+    deltaMvVerY = ( affLB.ver - affLT.ver ) << ( shift - getLog2( height ) );
   }
   else
   {
