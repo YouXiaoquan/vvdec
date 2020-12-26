@@ -175,7 +175,7 @@ int VVDecImpl::uninit()
   m_pcFrameNext = m_rcFrameList.end();
 
 #if defined( __linux__ )
-  malloc_trim(0);
+  //malloc_trim(0);
 #endif
 
   m_bInitialized = false;

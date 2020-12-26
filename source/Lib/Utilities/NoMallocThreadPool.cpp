@@ -51,7 +51,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 # include <pthread.h>
 #endif
 
-#include <emmintrin.h>
+//#include <emmintrin.h>
 
 
 NoMallocThreadPool::NoMallocThreadPool( int numThreads, const char * threadPoolName )

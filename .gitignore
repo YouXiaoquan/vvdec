@@ -26,4 +26,4 @@ core
 .cproject
 /Testing/
 /out/
-/CMakeSettings.json
+CMakeSettings.json
