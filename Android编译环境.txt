@@ -1,0 +1,56 @@
+一、准备工作
+    VS2019及以下两个最新稳定版Android开发工具
+    1. NDK(https://developer.android.com/ndk/downloads)
+    2. ADB(https://developer.android.com/studio/releases/platform-tools)
+二、环境变量设置
+    将1、2两个工具解压并将相应目录设置为PATH环境变量
+    如设置以下三个环境变量：
+    C:\Microsoft\AndroidNDK64\android-ndk-r22\toolchains\llvm\prebuilt\windows-x86_64\bin
+    C:\Microsoft\AndroidNDK64\android-ndk-r22\prebuilt\windows-x86_64\bin
+    C:\Microsoft\platform-tools
+三、添加工程脚本
+    在vvc的根目录下添加一个名为“CMakeSettings.json”的文件，内容如下：
+{
+  "configurations": [
+    {
+      "name": "Android-v8a-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "C:/Microsoft/AndroidNDK64/android-ndk-r22/build/cmake/android.toolchain.cmake",
+      "variables": []
+    },
+    {
+      "name": "Android-v8a-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [ "" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "C:/Microsoft/AndroidNDK64/android-ndk-r22/build/cmake/android.toolchain.cmake",
+      "variables": []
+    }
+  ]
+}
+
+    并确保android.toolchain.cmake在响应目录存在
+
+四、打开编译工程
+    用VS2019打开vvc文件夹，vs2019会自动加载vvc工程，可以编译！
+
+五、调试
+    连上arm-android手机，并打开手机的USB调试模式，使用如下命令调试：
+        1、adb shell "cd /data/local/tmp && chmod 777 vvdecapp && ./vvdecapp"
+        2、adb push .\AFF_A_HUAWEI_2.bit /data/local/tmp
+        3、adb shell "cd /data/local/tmp && chmod 777 vvdecapp && ./vvdecapp -b AFF_A_HUAWEI_2.bit -o out.yuv"
+        4、adb pull /data/local/tmp/out.yuv 
+
+        AFF_A_HUAWEI_2.bit 1080P在SCL-AL00（若干年前的荣耀手机4核1.1GHz）能进行约2fps解码
