@@ -48,7 +48,7 @@
 
 五、调试
     连上arm-android手机，并打开手机的USB调试模式，使用如下命令调试：
-        1、adb shell "cd /data/local/tmp && chmod 777 vvdecapp && ./vvdecapp"
+        1、adb push .\vvdecapp /data/local/tmp
         2、adb push .\AFF_A_HUAWEI_2.bit /data/local/tmp
         3、adb shell "cd /data/local/tmp && chmod 777 vvdecapp && ./vvdecapp -b AFF_A_HUAWEI_2.bit -o out.yuv"
         4、adb pull /data/local/tmp/out.yuv 
