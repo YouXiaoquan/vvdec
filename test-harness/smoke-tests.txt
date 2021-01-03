@@ -1,0 +1,222 @@
+#Sequence                           MD5                                 Comments
+8b400_A_Bytedance_2.bit             87e14541c2b6568a109a5505c73950db    
+8b400_B_Bytedance_2.bit             7fc9d86c78d08a8cdcaf097367ad2754    
+8b420_A_Bytedance_2.bit             da63784a3f1adb4eb171a0207e7c8d0f    
+8b420_B_Bytedance_2.bit             8bf6496f8768b68d8aa1106a89d3e38a
+8b422_A_Sony_3.bit                  bace446fb921fdc302ef19b582e81514    
+8b422_B_Sony_3.bit                  218461bfff62add9100426b8d5c759e5    
+8b422_C_Sony_3.bit                  66da389668c0a17362bc702d1813cee5    
+8b422_D_Sony_3.bit                  904c25a92006ec82a766f83043d44a82    
+8b422_E_Sony_3.bit                  951b7d6e377213405d6af065658aab4e    
+8b422_F_Sony_3.bit                  44afbeb0f5c81aa1590f0d09a7cde67f    
+#8b422_G_Sony_3.bit                  da41a9da5ba284b98c323cfe3d08818d    #palette mode
+#8b422_H_Sony_3.bit                  0f57ac3772dd96f6a15bdc7714448374    #palette mode
+#8b422_I_Sony_3.bit                  932b829861b061d02eb05a3daf6839e8    #palette mode
+#8b422_J_Sony_3.bit                  c19a6128a9b3a8bb0d9a43e5c003bba6    #palette mode
+#8b422_K_Sony_3.bit                  69324703977aef933df258ed3b8ad246    #palette mode
+#8b422_L_Sony_3.bit                  102a5f911d404e4646744b1b0a51d763    #palette mode
+10b400_A_Bytedance_2.bit            9607a0890e78ad7b3ca728356e919670    
+10b400_B_Bytedance_2.bit            b5fcc1c52de8ed51844a9bd2895bda75    
+10b422_A_Sony_3.bit                 2208f88160c9d4843193776be68b4162    
+10b422_B_Sony_3.bit                 ff31a655c94ba980bf22edddc516a4dc    
+10b422_C_Sony_3.bit                 2f979d2b3e300004aa18dd61d3274e8c    
+10b422_D_Sony_3.bit                 84eef631e8b33455a50416cbbe4c70c3    
+10b422_E_Sony_3.bit                 d0d684895810b42cfedca1fe90c9290e    
+10b422_F_Sony_3.bit                 6393a0a294bc4dc43a461e5295272086    
+#10b422_G_Sony_3.bit                 885b4a3027e53eae4e772cb240cd215a    #palette mode
+#10b422_H_Sony_3.bit                 f43b330ba9cdf03452a5592d970fb8b2    #palette mode
+#10b422_I_Sony_3.bit                 df80063e016f93e1c38f6c19e662523d    #palette mode
+#10b422_J_Sony_3.bit                 36023e5941125bbd22427579b7811672    #palette mode
+#10b422_K_Sony_3.bit                 a6cf3e9f1f6c8e9eb4461dd5f1c62c5a    #palette mode
+#10b422_L_Sony_3.bit                 9c3b33490fef4801507b368487a4e90a    #palette mode
+ACTPIC_A_Huawei_3.bit               d0e3566e21ee4a969f8a7d14885834b9    
+ACTPIC_B_Huawei_3.bit               adc5cd053f833bd677ffdaa04d018c00    
+ACTPIC_C_Huawei_3.bit               d0e3566e21ee4a969f8a7d14885834b9    
+AFF_A_HUAWEI_2.bit                  8732ee1301282050a105f5549c2e18ed    
+AFF_B_HUAWEI_2.bit                  8ebbbd37e7837550d98cf62996eb89be    
+ALF_A_Huawei_3.bit                  c74f2112dcf7c7621d5780e70c304f16    
+ALF_B_Huawei_3.bit                  708118e71c27cc409dfd7310dc787cc7    
+ALF_C_KDDI_2.bit                    3abac29208179fef1664347126da5dbc    
+ALF_D_Qualcomm_2.bit                7aebfea44c63e17ca00d39886e71d1fb    
+AMVR_A_HHI_3.bit                    df0859af7e5e787c7875e81cc5232ea2    
+AMVR_B_HHI_3.bit                    d6ca91941fbed14c437549be665bbcd0    
+APSALF_A_Qualcomm_2.bit             7aebfea44c63e17ca00d39886e71d1fb    
+APSLMCS_A_Dolby_3.bit               391ffc3c77fb4ec244030bbb45d0464d    
+APSLMCS_B_Dolby_3.bit               c07378acf6b111fd506d89458f592993    
+APSLMCS_C_Dolby_2.bit               7ae6e3706bbaab4cb025b77ed917146d    
+APSMULT_A_MediaTek_3.bit            80016b6f07e6870c7b7d5ba773ad1aaa    
+APSMULT_B_MediaTek_3.bit            5e1a2c3dcee3d9b4f01317442f4b5bbe    
+AUD_A_Broadcom_3.bit                5318620364f1f8f6153da3212a62a1f6    
+BCW_A_MediaTek_3.bit                9804d9d9c53fd4732a4fc7acce633fb6    
+BDOF_A_MediaTek_3.bit               f8a59c8718a903aa1226afe782b93c37    
+BDPCM_A_Orange_2.bit                8add42eff974256a352c802e95ec9196    
+BOUNDARY_A_Huawei_3.bit             2d194d115e7e9c05d7883571a2908e3b    
+CCALF_A_Sharp_3.bit                 3749afdcffa73b9da0e53b57c7f7bbe8    
+CCALF_B_Sharp_3.bit                 430ea233ad4f9d72a92fbece14dc010d    
+CCALF_C_Sharp_3.bit                 dba16561d87ae452d95fdba7512c81b4    
+CCALF_D_Sharp_3.bit                 81ffb84c91b73c6858322423d2355570    
+CCLM_A_KDDI_1.bit                   deffc9c6f33da9d28f6e17955bc939d8    
+CIIP_A_MediaTek_3.bit               e06b770d6719b8a2b89946f6e572e995    
+CodingToolsSets_A_Tencent_2.bit     fda2476f1f0ca046c0b3428689db314c    
+CodingToolsSets_B_Tencent_2.bit     ef5596c9a128c97b9511c215a12dbc35    
+CodingToolsSets_C_Tencent_2.bit     0d71aaa3bd6449f58deeca24fd9f4789    
+CodingToolsSets_D_Tencent_2.bit     23746a9ccab972cf26e6948a56d2bb96    
+CROP_A_Panasonic_3.bit              54ea60d96a4602fd61572e383050abd4    
+CROP_B_Panasonic_4.bit              bc7aa270283fbadfc7c74fd754a4fa64    
+CST_A_MediaTek_3.bit                f920c5e0d02fd24f0dc68a6f9ff9b439    
+CTU_A_MediaTek_3.bit                5e8763572577be3df1cc55674aadfb82    
+CTU_B_MediaTek_3.bit                725a60055178c50577328762e9eb3abc    
+CTU_C_MediaTek_3.bit                240f6b4f2b41c06a7d34357157af8596    
+CUBEMAP_A_MediaTek_3.bit            c21e46ca755ac54bc08b5a10087effb7    
+CUBEMAP_B_MediaTek_3.bit            78cc534a99ea16595d9393afb551a7f5    
+CUBEMAP_C_MediaTek_3.bit            98a8fa9f24e1bb019484f58bd3ad7e3d    
+DEBLOCKING_A_Sharp_3.bit            566bbee74cd034e892f82a7a49099a22    
+DEBLOCKING_B_Sharp_2.bit            6a8992d65d430a4ce086f26b87997ea3    
+DEBLOCKING_C_Huawei_3.bit           df88d9af5bf2452aff0b9121d79d835d    
+DEBLOCKING_E_Ericsson_2.bit         dc522c0c4e901f111b2f1d26cd7f551e    
+DEBLOCKING_E_Ericsson_3.bit         dc522c0c4e901f111b2f1d26cd7f551e    
+DEBLOCKING_F_Ericsson_1.bit         122ece6e98b1b380f01c7d99d40c7867    
+DEBLOCKING_F_Ericsson_2.bit         9c278adbfdbb06a5c59184e275638fd0    
+DMVR_A_Huawei_3.bit                 1b912fde6dbafeca0abb3097a592abf2    
+DMVR_B_KDDI_3.bit                   e83247cc74d5af9405f111db983ccfe5    
+DPB_A_Sharplabs_2.bit               51e5086343b7eb68328a254fd7dade66    
+DPB_B_Sharplabs_2.bit               23906b3a201def46f1e807f9d24c2ffd    
+DQ_A_HHI_3.bit                      ffe7baaeb44540b641c517a5c056286d    
+DQ_B_HHI_3.bit                      af3463963b4aed8d1ebaf5e885f68fcb    # Large yuv
+ENT444HIGHTIER_A_Sony_3.bit         60159f91d52810e78a750b3e9b1cbc06    
+ENT444HIGHTIER_B_Sony_3.bit         171e0ce9a6f5cc4a09b0872eb87f37d2    
+ENT444HIGHTIER_C_Sony_3.bit         abdf00d83bdabb19bec4db40bd4f7f08    
+ENT444HIGHTIER_D_Sony_3.bit         33400f6fe368eec04a0d553b8221e758    
+ENT444MAINTIER_A_Sony_3.bit         1a39aced80bba580d7d4648d2c0d2074    
+ENT444MAINTIER_B_Sony_3.bit         4a98c695c25d3d447dd86c889242eb11    
+ENT444MAINTIER_C_Sony_3.bit         66da9632b5fa836c37d5659b87ec7678    
+ENT444MAINTIER_D_Sony_3.bit         696f6b65df1f973c4b0f46db71c6e66f    
+ENTHIGHTIER_A_Sony_3.bit            29ddbf7c22c7e58c89e774f1ae643047    
+ENTHIGHTIER_B_Sony_3.bit            0dc20ad0c41c042b69e1660b4f3f3ac9    
+ENTHIGHTIER_C_Sony_3.bit            9cee630da86a81c7b8f8c6c99a0f6987    
+ENTHIGHTIER_D_Sony_3.bit            3736a21a66f595e9a7406de54a3ede8c    
+ENTMAINTIER_A_Sony_3.bit            86a8dd47aa908bc8d5f833e38d8e127d    
+ENTMAINTIER_B_Sony_3.bit            2d1835bcf0588189f16ad0e83360a544    
+ENTMAINTIER_C_Sony_3.bit            7dbd4bfa9ca5dee6fc11189f2e22154e    
+ENTMAINTIER_D_Sony_3.bit            1fceaaa35c03a1b9547b6df6b76b742e    
+ENTROPY_A_Chipsnmedia_2.bit         113e64270f3473869efb739e0273ffed    
+ENTROPY_A_Qualcomm_2.bit            6ebeb9db422e0b9b7077dc25268891a6    
+ENTROPY_B_Sharp_2.bit               2277bc22b8c8fc0f6578c377e032b237
+ERP_A_MediaTek_3.bit                3772b6d395d348d7b6323a3f908ada83        
+#FIELD_A_Panasonic_2.bit             eb6324a36ea6f7024d505e9db65c84f9    
+#FIELD_A_Panasonic_3.bit             eb6324a36ea6f7024d505e9db65c84f9    
+GPM_A_Alibaba_3.bit                 468e46fd7d6c362677eeda53d0695b38    
+HLG_A_NHK_2.bit                     55593b6f717bd46d40d248a2a3f09cb5    
+HLG_B_NHK_2.bit                     55593b6f717bd46d40d248a2a3f09cb5    
+IBC_A_Tencent_2.bit                 1ed62c56e2a2f2698aadf59d8a3bd60d    
+IBC_B_Tencent_2.bit                 62f32ae1c7a4f56f1492468dd85095f2    
+IBC_C_Tencent_2.bit                 cbea0370a4a5bf4fab9dcd18054d857a    
+IBC_D_Tencent_2.bit                 42f812cebfd702e5bf20bf143a60c1e0    
+IP_B_Nokia_1.bit                    3284d53e34752c301c982c41f89551d8    
+ISP_A_HHI_3.bit                     dde5df2c0d28719a341b3b8123b53155    
+ISP_B_HHI_3.bit                     0c7dc45ca345ec005513cb5448aec238    
+JCCR_A_Nokia_2.bit                  a25211dcd6cf0a8e6b0323fe91fbf8e0    
+JCCR_B_Nokia_2.bit                  bb19fad491b1ff045ac4cea15b4984fa    
+JCCR_C_HHI_3.bit                    c0303878a568dc0a29a12728c53dd999    
+JCCR_D_HHI_3.bit                    6832b0cb62cb894383c3421ca3df39d4    
+JCCR_E_Nokia_1.bit                  a25211dcd6cf0a8e6b0323fe91fbf8e0    
+JCCR_F_Nokia_1.bit                  bb19fad491b1ff045ac4cea15b4984fa    
+LFNST_A_LGE_3.bit                   f3e07a3fcc920c67d32ecf8b52b3e732    
+LFNST_B_LGE_3.bit                   ececbd264a9a59061b5718f70de8fe19    
+LFNST_C_HHI_3.bit                   bcc285f77fe11485add459e4f99160c1    
+LFNST_D_HHI_3.bit                   52546e593e2c40db8cf98029773191f9    
+LMCS_A_Dolby_3.bit                  0922d6d08c4ebc7b5d063144cfa95b04    
+LOSSLESS_A_HHI_3.bit                b2b6a0a09e171c00b9df9c620cf47b7d    
+LOSSLESS_B_HHI_3.bit                7c5b7623ecff86b67a52f7707d187307    
+LTRP_A_ERICSSON_2.bit               b0b9bc26555669594149b3ef81d80c5c    
+MERGE_A_Qualcomm_2.bit              6da2ed0dad1473e70cadadd9ca43e76a    
+MERGE_B_Qualcomm_2.bit              843465c6a50fa031499d99c24e0f11d5    
+MERGE_C_Qualcomm_2.bit              c680825dd0c616ad6367a2af8e6b8497    
+MERGE_D_Qualcomm_2.bit              b7138942cbbf26fad54c0810591e9323    
+MERGE_E_Qualcomm_2.bit              4a09f879018317fda2973a15cdda1695    
+MERGE_F_Qualcomm_2.bit              a5f9950269eac2507baf0d7a243eea41    
+MERGE_G_Qualcomm_2.bit              502a76151adedf1b8beee7f0d67ee735    
+MERGE_H_Qualcomm_2.bit              ebe3ff7bbacaf3dc3d7b0ca94f44e854    
+MERGE_I_Qualcomm_2.bit              a8c0daf0591151f2b6824ca6daecdc55    
+MERGE_J_Qualcomm_2.bit              93712d08d1efc2d9c2db4c32a9f1fe59    
+MIP_A_HHI_3.bit                     38833c21863182d37467f3fabf13e72c    
+MIP_B_HHI_3.bit                     43708959d70cf4ea1704bd11ba8ce4f8    
+MMVD_A_SAMSUNG_3.bit                e07e524588f9a7e939924ae0a2a419e8    
+MPM_A_LGE_3.bit                     5c1aa18256a778df681d18c536c2f42b    
+MRLP_A_HHI_2.bit                    4251da59fb65df2b036ff82ae4558911    
+MRLP_B_HHI_2.bit                    47b850cabc37c8d2bd75fdd6877f1a73    
+MTS_A_LGE_3.bit                     5ea1937a54fbd2c7920a08a835ee7e96    
+MTS_B_LGE_3.bit                     e7c5e2be47a1ba711ed5bbe539558c6a    
+MTS_LFNST_A_LGE_3.bit               27232028ea4f853dbb5999f13a5b75b8    
+MTS_LFNST_B_LGE_3.bit               07ee4f4801f0577850ac560333f9b239    
+MVCOMP_A_Sharp_2.bit                cfcc312b90ec8822524c12e5c6ce9917    
+PDPC_A_Qualcomm_3.bit               2732a1789fb6b2a264b3fb47c8c711e2    
+PDPC_B_Qualcomm_3.bit               0ffe729c9090ce9f57e9fe3ea97349d2    
+PDPC_C_Qualcomm_2.bit               04491709971aad732f4f1ff74ecb68b4    
+PHSH_B_Sharp_1.bit                  5ccbb8c904da44dd3ab1245e7db65682    
+POC_A_Nokia_1.bit                   7679445289c4eed21cc87e15b88dfb48    
+POUT_A_Sharplabs_2.bit              498e121d4fe57d1edc55505e9631a7bf    
+PPS_A_Bytedance_1.bit               bf74179530bf7e837ae3ebaf82079d2c    #
+PPS_B_Bytedance_1.bit               6e3577283bb1e8e26d883c03d89cb3f8    #
+PPS_C_Bytedance_1.bit               ad797d5dbd052dc9ef6bdf9fc522f340    #
+PQ_A_Dolby_1.bit                    c07378acf6b111fd506d89458f592993    
+PROF_A_Interdigital_3.bit           65badf01204e757ec8fc70c325db5107    
+PROF_B_Interdigital_3.bit           1b643d2c1bb439410a80d12519506abe    
+PSEXT_A_Nokia_2.bit                 ce9bd27e6a5ce5b839d054b8513f794b    
+PSEXT_B_Nokia_2.bit                 ce9bd27e6a5ce5b839d054b8513f794b    
+QTBTT_A_MediaTek_3.bit              b1a3b7fd84d5ea7e3a63993efe5e7724    
+QUANT_A_Huawei_2.bit                f2c06ae9b5195a4e5cd10d3e288a42ae    
+QUANT_B_Huawei_2.bit                12f717e96ec4fcc91b69a2faacfae962    
+QUANT_C_Huawei_2.bit                1451088ca92ef66af7cb03f13d7e11ad    
+QUANT_D_Huawei_2.bit                08dc6d75369d466436b179ba13de71b3    
+RAP_A_HHI_1.bit                     f46da2475bd22db8757dfa82f036a84f    
+RAP_B_HHI_1.bit                     562412a45e9592b8bfe54bc64d0a7092    
+RAP_C_HHI_1.bit                     2c75ed985df67e09dfea70a16fc3d91a    #
+RAP_D_HHI_1.bit                     4907419d59e00a8c2789732205e31a47    #
+RPL_A_ERICSSON_2.bit                d7fed587fea32a2b107adcc9e35e6980    
+RPR_A_Alibaba_4.bit                 8ec0e217cde95699eebec47cacc9679f    
+RPR_B_Alibaba_3.bit                 d677077f1a2ae9bd7ed74aae1ea66855    
+RPR_C_Alibaba_3.bit                 68d5f70493dfef6dfc3a1d83477f138f    
+SAO_A_SAMSUNG_3.bit                 85176b10e59d49a985c62e24fb23ee10    
+SAO_B_SAMSUNG_3.bit                 403e8104a15f82129a9048ffedb25ef0    
+SAO_C_SAMSUNG_3.bit                 0c303d7f065249226990eb26edda7431    
+SbTMVP_A_Bytedance_3.bit            bf62526a8cd73e71be6d5c81d511324e    
+SbTMVP_B_Bytedance_3.bit            e102e6b1d16def184273c33fc6555102    
+SBT_A_HUAWEI_2.bit                  953c9457641688e0f3cd2bd6e292d696    
+SCALING_A_InterDigital_1.bit        f990d21ef21896b64d0ba2dfbca1b338    
+SCALING_B_InterDigital_1.bit        c301642f54815ee04ef5ab9f51dd63e4    
+SCALING_C_InterDigital_1.bit        9c1ae8953c24d97c85f57739a78b7019    
+SDH_A_Dolby_2.bit                   c4b9d94df3afa92008aad37398ee5741    
+SLICES_A_HUAWEI_2.bit               24ae3a07cda1a9522a39910a0c0a1ba5    
+SMVD_A_HUAWEI_2.bit                 37ac855d34621ace68384c0fd87f8947    
+SPS_A_Bytedance_1.bit               bf74179530bf7e837ae3ebaf82079d2c    #
+SPS_B_Bytedance_1.bit               301ec80d334d4b5c4420c50c026b8167    #
+SPS_C_Bytedance_1.bit               4c4930c353e2668f61079b8fed0c25da    #
+TEMPSCAL_A_Panasonic_4.bit          be24468840eef19a7e1e8efdd259ba28    
+TEMPSCAL_C_Panasonic_3.bit          40e6e5d4c210e7ee03ab7e293d0adea0    
+TILE_A_Nokia_2.bit                  84c1ac923243f008cf04234bd2b8515d    
+TILE_B_Nokia_2.bit                  43bff2d63819814129c9d2744687b16b    
+TILE_C_Nokia_2.bit                  66261992cba7a828058d6761cdddc888    
+TILE_D_Nokia_2.bit                  6d56ab4ee6636c39b2a6fef135a5f11e    
+TILE_E_Nokia_2.bit                  964fb8ba8b9147917e2cfc2087811123    
+TILE_F_Nokia_2.bit                  fc2e6f73676d9f9ecfe4b76bf576340c    
+TILE_G_Nokia_2.bit                  81aad2be0e559542380c09b2d1afd613    
+TMVP_A_Chipsnmedia_3.bit            a41e06dc095f81648a691ef05d611911    
+TMVP_B_Chipsnmedia_3.bit            a6eae3a8165d41c5879894e3221a33db    
+TMVP_C_Chipsnmedia_3.bit            673d7c7c39fe0e20d5953aa3ce7cf94d    
+TMVP_D_Chipsnmedia_3.bit            fa27e8c13579eb41fb85dace741b48d6    
+TRANS_A_Chipsnmedia_2.bit           a8e5514d7f9b91cdc8c72dc1585b4624    
+TRANS_B_Chipsnmedia_2.bit           973c3fb027287a9da0cd7b08dbe435c8    
+TRANS_C_Chipsnmedia_2.bit           b99f4302b14897a47ddd1083cb79fd8c    
+TRANS_D_Chipsnmedia_2.bit           71c4a08665de3203300f95d00c3018ff    
+TREE_A_HHI_3.bit                    fffc6bc2778989543bca5112c1de97e7    
+TREE_B_HHI_3.bit                    8547c6f156ad1cf9838d7844430cc24a    
+TREE_C_HHI_3.bit                    9776ba9d54f57a33be2d9807bc33c783    # Large yuv
+WPP_A_Sharp_3.bit                   8b2803b4d95dc20adf94e077a139860b    
+WPP_B_Sharp_2.bit                   62a5d70c50c13842ac85e55aa1fc0f3d    
+WP_A_InterDigital_3.bit             40223c81e308ddb9e98ab5524960e0aa    
+WP_B_InterDigital_3.bit             eb9aa1b005b6777e8aa3b3f47548e84d    
+WRAP_A_InterDigital_4.bit           d7f2687231a1f2f9ec70fa3ff5782f38    
+WRAP_B_InterDigital_4.bit           871713a03837f406d524f372d3c97bdc    
+WRAP_C_InterDigital_4.bit           7d2db606e7ffefd254a73f5faac5e164    
+WRAP_D_InterDigital_4.bit           e369f002a46e92338db1271dd6166157    

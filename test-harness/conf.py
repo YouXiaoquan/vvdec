@@ -1,15 +1,15 @@
 # Copy this conf.py.example to conf.py and configure all the variables
 # beginning with my_, then you will be able run the various test scripts
-my_machine_name  = ''  # short name to identify encodes made on this machine
-my_machine_desc  = ''  # description of hardware, CPU(s), memory, etc
-my_sequences     = r'F:\git\test_seq'
-my_vvdec_source  = r'R:\vvdec' # location of CMakeLists.txt
-my_vvdec_decoder = r'R:\vvdec\bin\vvdecapp'
+my_machine_name  = 'YXQUAN'  # short name to identify encodes made on this machine
+my_machine_desc  = 'i7 16GB'  # description of hardware, CPU(s), memory, etc
+my_sequences     = r'D:\WorkTmp\vvdec-yxquan\ext\all'
+my_vvdec_source  = r'D:\WorkTmp\vvdec-CM001' # location of CMakeLists.txt
+my_vvdec_decoder = r'D:\WorkTmp\vvdec-CM001\bin\release-static'
 my_progress      = True # do you want to see build / encode status on console?
-my_adb_cmd       = r'R:\platform-tools\adb.exe'
-my_adb_sequences = r'/data/local/tmp/test_seq'
+my_adb_cmd       = r'C:\Microsoft\platform-tools\adb.exe'
+my_adb_sequences = r'/data/local/tmp/testSeq'
 my_adb_decoder   = r'/data/local/tmp/vvdecapp'
-my_adb_tmpfolder = r'/data/local/tmp'
+my_adb_tmpfolder = r'/data/local/tmp/tmp'
 my_make_flags    = ''
 # decoder binary name, default vvdecapp
 decoder_binary_name = 'vvdecapp'
@@ -31,7 +31,7 @@ my_local_changers = False
 # per run, but should be deleted upon completion, so it does not require
 # much space but it should have good throughput. If not defined Python
 # will use the default temp folder for your platform and user account
-my_tempfolder   = r'R:\temp'
+my_tempfolder   = r'D:\WorkTmp\tmp'
 
 
 # if you want the script to create pastebins of warnings and errors you
@@ -56,14 +56,14 @@ my_builds = {
     #'llvm'  : ('llvm/', 'gcc', 'Unix Makefiles', 'checked',
     #           {'CC' : 'clang', 'CXX' : 'clang++'}),
     #'vc15'  : ('vc15/', 'vc', 'Visual Studio 15 2017 Win64', 'checked', {}),
-    #'vc16'  : ('vc16/', 'vc', 'Visual Studio 16 2019', 'checked', {'-A':'x64'}),
+    #'vc16'  : ('vc16/', 'vc', 'Visual Studio 16 2019', 'win-arm64', {}),
     #'vc15D' : ('vc15D/', 'vc', 'Visual Studio 15 2017 Win64', 'debug crt noasm ppa', {}),
     #'win32' : ('vc15x86/', 'vc', 'Visual Studio 15 2017', 'static ppa', {}),
     #'mingw' : ('mingw/', 'gcc', 'MinGW Makefiles', 'tests',
     #           {'PATH' : r'C:\mingw64\bin'}),
     #'gcc' : ('default/', 'gcc', 'Unix Makefiles', 'ffmpeg-static', 
     #           {'LD_LIBRARY_PATH' : r'/home/project/lib', 'PKG_CONFIG_PATH' : r'/home/project/lib/pkgconfig'})
-    #'ndk'  : ('ndk/', 'clang', 'Unix Makefiles', 'checked', {'ANDROID_ABI':'arm64-v8a', 'ANDROID_NATIVE_API_LEVEL':'19', 'ANDROID_PLATFORM':'19'}),
+    'ndk'  : ('ndk/', 'clang', 'Unix Makefiles', 'checked', {'ANDROID_ABI':'arm64-v8a', 'ANDROID_NATIVE_API_LEVEL':'19', 'ANDROID_PLATFORM':'19'}),
 }
 
 # Many builds of vvdec will produce the same outputs given the same input
@@ -77,6 +77,7 @@ my_builds = {
 #            intended for MinGW/bin folder
 
 # short-hand strings for CMAKE options, feel free to add more
+#    'platform' : '-DCMAKE_GENERATOR_PLATFORM=x64'
 option_strings = {
     'warn'    : '-DWARNINGS_AS_ERRORS=ON',
     'checked' : '-DCHECKED_BUILD=ON',
@@ -85,4 +86,8 @@ option_strings = {
     'reldeb'  : '-DCMAKE_BUILD_TYPE=RelWithDebInfo',
     'static'  : '-DENABLE_SHARED=OFF',
     'noasm'   : '-DENABLE_ASSEMBLY=OFF',
+    'win64'     : '-A x64',
+    'win32'     : '-A win32',
+    'win-arm64' : '-A arm64',
+    'win-arm32' : '-A arm',
 }

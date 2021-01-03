@@ -1,0 +1,1 @@
+for %%a in (D:\WorkTmp\vvdec-yxquan\ext\all\*.bit) do adb push %%a /data/local/tmp/testSeq
